@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operação 300 — Revisaço GM Marabá - PA | Questões FADESP com Videoaula</title>
+<meta name="description" content="Revisaço com questões comentadas e videoaulas para a Guarda Municipal de Marabá - PA. Questões no padrão FADESP, caderno bônus em PDF com 300 questões e tira-dúvidas com o professor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:Anton;src:url(fonts/anton.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Oswald;font-weight:500;src:url(fonts/oswald-500.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Oswald;font-weight:700;src:url(fonts/oswald-700.woff2) format("woff2");font-display:swap}
+:root{
+  --navy:#061a4d; --navy2:#0a2c78; --blue:#1349b0; --blue2:#2a6fe0;
+  --yellow:#ffd21f; --yellow2:#ffcc00; --ink:#0a1d4f; --red:#d7261e; --green:#37b25a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:#fff;background:var(--navy);line-height:1.5}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.osw{font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+
+/* barra da prova */
+.topbar{position:sticky;top:0;z-index:50;background:var(--yellow);color:var(--ink);text-align:center;padding:9px 12px;font-family:Oswald,sans-serif;font-weight:700;font-size:15px;letter-spacing:.5px;box-shadow:0 3px 12px rgba(0,0,0,.35)}
+.topbar b{color:var(--red)}
+.topbar .cd{display:inline-block;margin-left:8px;background:var(--ink);color:var(--yellow);border-radius:6px;padding:1px 8px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:34px 0 56px;
+  background:radial-gradient(ellipse 80% 60% at 60% 35%,var(--blue2) 0%,var(--blue) 35%,var(--navy2) 70%,var(--navy) 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 60% 30%,rgba(255,255,255,.035) 0 6deg,transparent 6deg 14deg)}
+.hero .wrap{position:relative;text-align:center}
+.titulo{width:min(860px,100%);margin:0 auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.faixa{display:inline-block;margin-top:10px;background:var(--yellow);color:var(--ink);padding:8px 26px;border-radius:8px;transform:skewX(-8deg);box-shadow:0 6px 0 #b98d00;font-size:clamp(16px,2.6vw,26px);line-height:1.2}
+.faixa span{display:inline-block;transform:skewX(8deg)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10px;margin-top:28px}
+.emblema{width:min(400px,100%);margin:0 auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.5))}
+.agente{width:100%;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 88%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 88%,transparent 100%);
+  mask-composite:intersect}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.chip{background:rgba(6,26,77,.82);border:2px solid var(--yellow);border-radius:14px;padding:10px 16px;text-align:left;min-width:200px}
+.chip b{font-family:Anton,sans-serif;font-weight:400;font-size:28px;color:var(--yellow);display:block;line-height:1}
+.chip span{font-family:Oswald,sans-serif;font-weight:500;font-size:15px}
+.prova{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:#fff;color:var(--ink);border-radius:40px;padding:6px 24px 6px 16px;font-family:Oswald,sans-serif;font-weight:700;font-size:clamp(16px,2.6vw,24px);box-shadow:0 6px 18px rgba(0,0,0,.45)}
+.prova b{color:var(--red)}
+.btn{display:inline-block;margin-top:18px;font-family:Oswald,sans-serif;font-weight:700;font-size:clamp(20px,3.4vw,32px);color:var(--ink);text-decoration:none;background:linear-gradient(#ffe25a,var(--yellow2));padding:12px 46px;border-radius:12px;box-shadow:0 6px 0 #b98d00,0 12px 26px rgba(0,0,0,.45);letter-spacing:1px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #b98d00}
+.pulse{animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+
+/* seções */
+section{padding:64px 0}
+.sec-light{background:#f2f5fb;color:var(--ink)}
+.sec-dark{background:linear-gradient(180deg,var(--navy) 0%,#0a2462 100%)}
+h2.h{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(30px,5vw,48px);line-height:1.05;text-align:center;letter-spacing:.5px}
+h2.h em{font-style:normal;color:var(--yellow)}
+.sec-light h2.h em{color:var(--blue)}
+.sub{text-align:center;max-width:720px;margin:12px auto 0;font-size:17px;opacity:.85}
+
+/* entregáveis */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:34px}
+.card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(10,29,79,.12);border-top:6px solid var(--yellow)}
+.card .ic{width:52px;height:52px;border-radius:12px;background:var(--navy2);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.card h3{font-family:Oswald,sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;line-height:1.15}
+.card p{margin-top:6px;font-size:15px;color:#3a4766}
+
+/* conteúdo */
+.total{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:26px}
+.total div{background:var(--yellow);color:var(--ink);border-radius:12px;padding:8px 18px;font-family:Oswald,sans-serif;font-weight:700;font-size:18px;text-transform:uppercase}
+.total div b{font-family:Anton,sans-serif;font-weight:400;font-size:26px;margin-right:6px}
+.disc{display:grid;gap:14px;margin-top:30px}
+.d{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 18px}
+.d-top{display:flex;align-items:center;gap:14px}
+.d-num{flex:none;width:74px;height:74px;border-radius:12px;background:var(--yellow);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.d-num b{font-family:Anton,sans-serif;font-weight:400;font-size:34px}
+.d-num i{font-style:normal;font-family:Oswald,sans-serif;font-weight:700;font-size:12px}
+.d-name{flex:1;font-family:Oswald,sans-serif;font-weight:700;font-size:clamp(18px,2.6vw,24px);text-transform:uppercase;line-height:1.1}
+.peso{flex:none;font-family:Oswald,sans-serif;font-weight:700;font-size:14px;border-radius:30px;padding:4px 12px;background:#fff;color:var(--ink);text-transform:uppercase}
+.peso.p4{background:var(--red);color:#fff}
+.subs{margin:14px 0 0 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.subs div{display:flex;justify-content:space-between;gap:10px;background:rgba(6,26,77,.6);border-radius:8px;padding:8px 12px;font-size:15px}
+.subs div b{color:var(--yellow);white-space:nowrap}
+
+/* mockup */
+.mock{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.mock img{border-radius:18px;box-shadow:0 18px 40px rgba(10,29,79,.3)}
+.check{list-style:none;margin-top:18px;display:grid;gap:10px}
+.check li{display:flex;gap:10px;align-items:flex-start;font-size:17px}
+.check li:before{content:"";flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/16px no-repeat}
+
+/* oferta */
+.oferta{max-width:620px;margin:30px auto 0;background:#fff;color:var(--ink);border-radius:22px;padding:30px 26px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.45);border:4px solid var(--yellow)}
+.oferta .tag{display:inline-block;background:var(--red);color:#fff;border-radius:30px;padding:4px 16px;font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:14px}
+.oferta h3{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(26px,4.4vw,38px);line-height:1.05;margin-top:12px}
+.oferta ul{text-align:left;margin:18px auto 0;max-width:460px}
+.oferta .check li{font-size:16px}
+.preco{margin-top:20px;font-family:Anton,sans-serif;font-weight:400;font-size:52px;color:var(--blue);line-height:1}
+.preco small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:14px;color:#5b6787;margin-top:6px}
+
+/* faq */
+.faq{max-width:780px;margin:30px auto 0;display:grid;gap:12px}
+.faq details{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 4px 14px rgba(10,29,79,.08)}
+.faq summary{cursor:pointer;font-family:Oswald,sans-serif;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--blue);font-size:24px;line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq p{margin-top:8px;color:#3a4766}
+
+footer{background:#030f30;text-align:center;padding:26px 20px 90px;font-size:13px;opacity:.75}
+
+/* CTA fixo no celular */
+.float{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px;background:rgba(3,15,48,.94);box-shadow:0 -4px 16px rgba(0,0,0,.4)}
+.float .btn{display:block;margin:0;text-align:center;font-size:20px;padding:10px}
+
+@media (max-width:760px){
+  .hero-grid,.mock{grid-template-columns:1fr}
+  .agente{max-width:440px;margin:0 auto}
+  .subs{margin-left:0}
+  .d-top{flex-wrap:wrap}
+  .float{display:block}
+  .topbar{font-size:13px}
+  .faixa{padding:8px 16px;margin-left:8px;margin-right:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">DATA DA PROVA: <b>24 DE JANEIRO DE 2027</b> <span class="cd" id="cd">—</span></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <img class="titulo" src="img/titulo.png" alt="Operação 300">
+    <div class="faixa osw"><span>Revisaço com questões com videoaula para GM Marabá<br>Português + Leis Municipais + Leis Específicas</span></div>
+
+    <div class="hero-grid">
+      <img class="emblema" src="img/emblema.png" alt="Guarda Municipal de Marabá - PA">
+      <img class="agente" src="img/agente.jpg" alt="Agente da Guarda Municipal">
+    </div>
+
+    <div class="chips">
+      <div class="chip"><b>240</b><span>Questões no revisaço</span></div>
+      <div class="chip"><b>+300</b><span>Questões no caderno bônus</span></div>
+      <div class="chip"><b>FADESP</b><span>Questões no padrão da banca</span></div>
+    </div>
+
+    <div class="prova">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0a1d4f" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      DATA DA PROVA: <b>24 DE JANEIRO DE 2027</b>
+    </div>
+    <br>
+    <a class="btn pulse cta" href="#oferta">QUERO MINHA VAGA NA GMM!</a>
+  </div>
+</header>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="sec-light">
+  <div class="wrap">
+    <h2 class="h">O QUE VOCÊ <em>RECEBE</em></h2>
+    <p class="sub">Tudo pensado para a prova da Guarda Municipal de Marabá - PA, no estilo de cobrança da FADESP.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="#ffd21f"><path d="M8 5v14l11-7z"/></svg></div>
+        <h3>Revisaço com videoaula</h3>
+        <p>Questões resolvidas e explicadas em vídeo, disciplina por disciplina.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffd21f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
+        <h3>Caderno bônus em PDF</h3>
+        <p>300 questões com gabarito + videoaulas separadas para revisar onde quiser.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffd21f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+        <h3>Padrão FADESP</h3>
+        <p>Questões no padrão da banca do concurso, para você chegar na prova acostumado.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffd21f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div>
+        <h3>Tira-dúvidas com o professor</h3>
+        <p>Ficou com dúvida em alguma questão? Fale direto com o professor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<section class="sec-dark">
+  <div class="wrap">
+    <h2 class="h">CONTEÚDO DO <em>REVISAÇO</em></h2>
+    <p class="sub">As disciplinas de maior peso da prova, com a quantidade de questões de cada uma.</p>
+    <div class="total">
+      <div><b>240</b>questões no revisaço</div>
+      <div><b>+300</b>no caderno bônus</div>
+    </div>
+
+    <div class="disc">
+      <div class="d">
+        <div class="d-top"><div class="d-num"><b>40</b><i>QUESTÕES</i></div><div class="d-name">Português</div><span class="peso">Peso 2</span></div>
+      </div>
+      <div class="d">
+        <div class="d-top"><div class="d-num"><b>40</b><i>QUESTÕES</i></div><div class="d-name">Leis Municipais</div><span class="peso">Peso 2</span></div>
+      </div>
+      <div class="d">
+        <div class="d-top"><div class="d-num"><b>40</b><i>QUESTÕES</i></div><div class="d-name">Leis Específicas</div><span class="peso p4">Peso 4</span></div>
+        <div class="subs">
+          <div>Direito Constitucional<b>10 Q</b></div>
+          <div>Direito Administrativo<b>10 Q</b></div>
+          <div>Direito Penal<b>10 Q</b></div>
+          <div>Direito Processual Penal<b>10 Q</b></div>
+        </div>
+      </div>
+      <div class="d">
+        <div class="d-top"><div class="d-num"><b>80</b><i>QUESTÕES</i></div><div class="d-name">Legislação Extravagante</div><span class="peso p4">Peso 4</span></div>
+        <div class="subs">
+          <div>Estatuto da Guarda e Leis Correlatas (itens 1 ao 7 do edital)<b>50 Q</b></div>
+          <div>Legislação Penal Especial<b>30 Q</b></div>
+        </div>
+      </div>
+      <div class="d">
+        <div class="d-top"><div class="d-num"><b>40</b><i>QUESTÕES</i></div><div class="d-name">Conhecimentos do Município de Marabá</div><span class="peso">Peso 2</span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center"><a class="btn cta" href="#oferta">QUERO O REVISAÇO!</a></div>
+  </div>
+</section>
+
+<!-- MOCKUP -->
+<section class="sec-light">
+  <div class="wrap mock">
+    <img src="img/criativo.jpg" alt="Operação 300 — material da GM Marabá">
+    <div>
+      <h2 class="h" style="text-align:left">REVISE COM <em>FOCO NA BANCA</em></h2>
+      <ul class="check">
+        <li>Videoaulas separadas por disciplina</li>
+        <li>Caderno de questões em PDF com gabarito</li>
+        <li>Questões no padrão FADESP</li>
+        <li>Material atualizado conforme o último edital</li>
+        <li>Tira-dúvidas com o professor</li>
+      </ul>
+      <a class="btn cta" href="#oferta">GARANTIR MEU ACESSO</a>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="sec-dark" id="oferta">
+  <div class="wrap">
+    <h2 class="h">GARANTA SEU <em>ACESSO</em></h2>
+    <div class="oferta">
+      <span class="tag">Operação 300 • GM Marabá - PA</span>
+      <h3>REVISAÇO COM QUESTÕES + VIDEOAULA</h3>
+      <ul class="check">
+        <li>Português, Leis Municipais, Leis Específicas, Legislação Extravagante e Conhecimentos de Marabá (240 questões)</li>
+        <li>Caderno BÔNUS em PDF com 300 questões + videoaulas separadas</li>
+        <li>Questões no padrão da FADESP</li>
+        <li>Tira-dúvidas com o professor</li>
+      </ul>
+            <div class="preco" id="preco">R$ 49,90</div>
+      <a class="btn pulse cta" href="https://p.eduzz.com/2658056" target="_blank" rel="noopener">QUERO MINHA VAGA!</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-light">
+  <div class="wrap">
+    <h2 class="h">PERGUNTAS <em>FREQUENTES</em></h2>
+    <div class="faq">
+      <details><summary>Para qual concurso é o material?</summary><p>Para a Guarda Municipal de Marabá - PA, com prova marcada para 24 de janeiro de 2027.</p></details>
+      <details><summary>As questões seguem qual banca?</summary><p>Todas as questões seguem o padrão da FADESP, a banca do concurso.</p></details>
+      <details><summary>Como é o material?</summary><p>Revisaço com questões resolvidas em videoaula, mais um caderno bônus em PDF com 300 questões e gabarito, e videoaulas separadas por disciplina.</p></details>
+      <details><summary>Quais disciplinas estão incluídas?</summary><p>Português, Leis Municipais, Leis Específicas (Constitucional, Administrativo, Penal e Processual Penal), Legislação Extravagante (Estatuto da Guarda e Leis Correlatas, Legislação Penal Especial) e Conhecimentos do Município de Marabá.</p></details>
+      <details><summary>E se eu tiver dúvida em alguma questão?</summary><p>Você tem acesso ao tira-dúvidas com o professor.</p></details>
+    </div>
+    <div style="text-align:center;margin-top:10px"><a class="btn cta" href="#oferta">QUERO COMEÇAR AGORA!</a></div>
+  </div>
+</section>
+
+<footer>
+  Operação 300 — Revisaço GM Marabá - PA. Material preparatório independente, sem vínculo com a Prefeitura de Marabá ou com a banca FADESP.
+</footer>
+
+<div class="float"><a class="btn cta" href="https://p.eduzz.com/2658056" target="_blank" rel="noopener">QUERO MINHA VAGA — R$ 49,90</a></div>
+
+<script>
+// Contagem regressiva até a prova (24/01/2027)
+(function(){
+  var alvo = new Date('2027-01-24T08:00:00-03:00').getTime();
+  var el = document.getElementById('cd');
+  function tick(){
+    var d = alvo - Date.now();
+    if (d <= 0) { el.textContent = 'É HOJE!'; return; }
+    var dias = Math.floor(d / 864e5);
+    el.textContent = 'FALTAM ' + dias + (dias === 1 ? ' DIA' : ' DIAS');
+  }
+  tick(); setInterval(tick, 60000);
+})();
+</script>
+</body>
+</html>
